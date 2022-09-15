@@ -7,3 +7,6 @@
 You can see the demo of the Palindrome Checker 👇
 
 https://palindromechecking.netlify.app/
+
+## Preview
+![image](https://user-images.githubusercontent.com/73056786/190514744-ade48387-12a6-4aa8-b925-582e361a50fe.png)
