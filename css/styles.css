@@ -1,0 +1,219 @@
+@charset "UTF-8";
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --bs-blue: #0d6efd;
+  --bs-indigo: #6610f2;
+  --bs-purple: #6f42c1;
+  --bs-pink: #d63384;
+  --bs-red: #dc3545;
+  --bs-orange: #fd7e14;
+  --bs-yellow: #ffc107;
+  --bs-green: #198754;
+  --bs-teal: #20c997;
+  --bs-cyan: #0dcaf0;
+  --bs-white: #fff;
+  --bs-gray: #6c757d;
+  --bs-gray-dark: #343a40;
+  --bs-gray-100: #f8f9fa;
+  --bs-gray-200: #e9ecef;
+  --bs-gray-300: #dee2e6;
+  --bs-gray-400: #ced4da;
+  --bs-gray-500: #adb5bd;
+  --bs-gray-600: #6c757d;
+  --bs-gray-700: #495057;
+  --bs-gray-800: #343a40;
+  --bs-gray-900: #000000;
+  --bs-primary: #2a5555;
+  --bs-secondary: #6c757d;
+  --bs-success: #198754;
+  --bs-info: #0dcaf0;
+  --bs-warning: #ffc107;
+  --bs-danger: #dc3545;
+  --bs-light: #f8f9fa;
+  --bs-dark: #000000;
+  --bs-primary-rgb: 42, 85, 85;
+  --bs-secondary-rgb: 108, 117, 125;
+  --bs-success-rgb: 25, 135, 84;
+  --bs-info-rgb: 13, 202, 240;
+  --bs-warning-rgb: 255, 193, 7;
+  --bs-danger-rgb: 220, 53, 69;
+  --bs-light-rgb: 248, 249, 250;
+  --bs-dark-rgb: 0, 0, 0;
+  --bs-white-rgb: 255, 255, 255;
+  --bs-black-rgb: 0, 0, 0;
+  --bs-body-color-rgb: 0, 0, 0;
+  --bs-body-bg-rgb: 255, 255, 255;
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  --bs-body-font-family: DM Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --bs-body-font-size: 1rem;
+  --bs-body-font-weight: 400;
+  --bs-body-line-height: 1.5;
+  --bs-body-color: #000000;
+  --bs-body-bg: #fff;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
+body{
+  margin: 0;
+  font-family: var(--bs-body-font-family);
+  font-size: var(--bs-body-font-size);
+  font-weight: var(--bs-body-font-weight);
+  line-height: var(--bs-body-line-height);
+  color: var(--bs-body-color);
+  text-align: var(--bs-body-text-align);
+  background-color: var(--bs-purple);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+  justify-content: center;
+  /* min-height: 100vh; */
+  min-height: 80vh;
+}
+
+::selection{
+  color: #fff;
+  background: rgb(170,87,204,0.8);
+}
+
+.wrapper{
+  max-width: 500px;
+  background: #fff;
+  border-radius: 7px;
+  padding: 20px 25px 15px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  margin-top: 6rem;
+}
+header h1{
+  font-size: 27px;
+  font-weight: 500;
+  text-align: center;
+  justify-content: center;
+}
+header p{
+  margin-top: 5px;
+  font-size: 18px;
+  color: #474747;
+  text-align: justify;
+}
+.inputs{
+  margin: 20px 0 27px;
+}
+.inputs input{
+  width: 100%;
+  height: 60px;
+  outline: none;
+  padding: 0 17px;
+  font-size: 19px;
+  border-radius: 5px;
+  border: 1px solid #999;
+  transition: 0.1s ease;
+}
+.inputs input::placeholder{
+  color: #999999;
+}
+.inputs input:focus{
+  box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+}
+.inputs input:focus::placeholder{
+  color: #bebebe;
+}
+.inputs button{
+  width: 100%;
+  height: 56px;
+  border: none;
+  opacity: 0.7;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 17px;
+  margin-top: 20px;
+  border-radius: 5px;
+  pointer-events: none;
+  background: #AA57CC;
+  transition: opacity 0.15s ease;
+}
+.inputs button.active{
+  opacity: 1;
+  pointer-events: auto;
+}
+.info-txt{
+  display: none;
+  font-size: 19px;
+  text-align: center;
+  margin-bottom: 18px;
+}
+.info-txt span{
+  color: #AA57CC;
+}
+@media (max-width: 520px) {
+  .wrapper{
+    padding: 17px 20px 10px;
+  }
+  header h1{
+    font-size: 25px;
+  }
+  header p{
+    font-size: 16px;
+  }
+  .inputs input{
+    height: 54px;
+    font-size: 17px;
+  }
+  .inputs button{
+    height: 50px;
+    font-size: 16px;
+    margin-top: 17px;
+  }
+  .info-txt{
+    font-size: 18px;
+    color: #000000;
+  }
+}
+
+.social-icons {
+  position: relative;
+  z-index: 2;
+}
+.social-icons .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 100rem;
+  color: #ffffff;
+}
+
+@media (min-width: 992px) {
+  .social-icons {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 2.5rem;
+    width: auto;
+  }
+}
