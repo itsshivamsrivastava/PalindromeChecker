@@ -17,11 +17,9 @@ checkPalindrome = () => {
     if (inputVal === reverseInput) {
         result.style.display = "block";
         document.querySelector(".info-txt").innerHTML = "Yes, it is a Palindrome";
-        console.log("Yes, it is a Palindrome");
     } else {
         result.style.display = "block";
-        document.querySelector(".info-txt").innerHTML = "No, it is a Palindrome";
-        console.log("No, it is not a Palindrome");
+        document.querySelector(".info-txt").innerHTML = "No, it is not a Palindrome";
     }
 }
 button.addEventListener("click", checkPalindrome);
